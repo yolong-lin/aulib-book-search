@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/book_detail_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/book_detail_image"
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                android:layout_below="@id/book_detail_name"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/book_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+                tools:text="Here is Book NameHere is Book NameHere is Book NameHere is Book NameHere is Book NameHere is Book NameHere is Book NameHere is Book Name" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/book_detail_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_detail_name"
+                android:layout_toEndOf="@id/book_detail_image"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                tools:text="Mr. Lin" />
+
+            <TextView
+                android:id="@+id/book_detail_isbn"
+                android:layout_width="wrap_content"
+                android:textStyle="italic|bold"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_detail_author"
+                android:layout_toEndOf="@id/book_detail_image"
+                android:text="Here is Book's ISBN" />
+
+            <TextView
+                android:id="@+id/book_detail_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_detail_isbn"
+                android:layout_toEndOf="@id/book_detail_image"
+                android:layout_marginTop="8dp"
+                android:textStyle="italic|bold"
+                android:text="Here is Book's publisher" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/book_detail_collections_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_detail_wrapper"
+            android:layout_marginEnd="20dp"
+            android:textStyle="bold"
+            android:text="館藏: " />
+
+        <TextView
+            android:id="@+id/book_detail_collections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_detail_wrapper"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/book_detail_collections_text"
+            tools:text="館藏地: 罕見書庫\n
+索書號: 874.57\n
+Status: 仍在館內\n
+流通類別: 可借圖書\n
+\n
+館藏地: 罕見書庫\n
+索書號: 874.57\n
+Status: 仍在館內\n
+流通類別: 可借圖書" />
+
+    </RelativeLayout>
+
+</ScrollView>
