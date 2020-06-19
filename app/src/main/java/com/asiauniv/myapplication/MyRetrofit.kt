@@ -9,8 +9,7 @@ object MyRetrofit {
         println("INIT")
     }
 
-//    const val BASE_URL = "http://da8fd222.ngrok.io"
-    const val BASE_URL = "http://10.0.2.2:5000"
+    const val BASE_URL = "https://aulib-api.herokuapp.com"
 
     val instant: Retrofit by lazy {
         val retrofit = Retrofit.Builder()
