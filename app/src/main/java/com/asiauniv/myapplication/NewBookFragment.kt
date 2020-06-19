@@ -38,27 +38,23 @@ class NewBookFragment : Fragment() {
 
 
         // Networking: Start
-        val retrofit = MyRetrofit.instant
 
+        val retrofit = MyRetrofit.instant
         val service = retrofit.create(Service::class.java)
         val call = service.getNewBooks()
-
         call.enqueue(object : Callback<ArrayList<Book>> {
-            override fun onFailure(call: Call<ArrayList<Book>>, t: Throwable) {
-                Log.d("MainActivity", "Fail~~")
-                Log.d("MainActivity", t.message!!)
-            }
-
             override fun onResponse(
                 call: Call<ArrayList<Book>>,
                 response: Response<ArrayList<Book>>
             ) {
                 val bookBase = response.body()
                 Log.d("MainActivity", bookBase.toString() )
-//                books = ArrayList(bookBase?.book!!)
                 adapter.setBooks(bookBase!!)
             }
-
+            override fun onFailure(call: Call<ArrayList<Book>>, t: Throwable) {
+                Log.d("MainActivity", "Fail~~")
+                Log.d("MainActivity", t.message!!)
+            }
         })
         // Networking: End
         return view

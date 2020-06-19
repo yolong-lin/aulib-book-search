@@ -5,10 +5,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object MyRetrofit {
 
-    init {
-        println("INIT")
-    }
-
     const val BASE_URL = "https://aulib-api.herokuapp.com"
 
     val instant: Retrofit by lazy {
